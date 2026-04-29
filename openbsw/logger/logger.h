@@ -85,7 +85,7 @@ struct Message
 };
 
 #define MESSAGE(name, component, level) \
-struct __attribute__((packed)) name : public ::rcore::logger::Message<component, ::rcore::logger::LogLevel::level, ::rcore::logger::HashedId(#name)>
+struct __attribute__((packed)) name : public ::openbsw::logger::Message<component, ::rcore::logger::LogLevel::level, ::rcore::logger::HashedId(#name)>
 
 template<typename M>
 void log(M m)
